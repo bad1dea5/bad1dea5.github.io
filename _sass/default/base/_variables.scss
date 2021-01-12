@@ -1,0 +1,11 @@
+
+$default-spacing: 1em !default
+
+$default-spacings: (
+	0: 0,
+	1: $default-spacing / 4,
+	2: $default-spacing / 2,
+	3: $default-spacing,
+	4: $default-spacing * 1.5,
+	5: $default-spacing * 3,
+) !default;

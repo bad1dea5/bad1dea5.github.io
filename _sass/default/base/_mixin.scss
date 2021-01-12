@@ -1,0 +1,29 @@
+@mixin generate($utility, $seperator: '-') {
+	$values: map-get($utility, values);
+	
+	@if type-of($values) == "string" or type-of(nth($values, 1)) != "list" {
+		$values: zip($values, $values);
+	}
+	
+	@each $key, $value in $values {
+		$properties: map-get($utility, property);
+		
+		@if type-of($properties) == "string" {
+			$properties: append((), $properties);
+		}
+		
+		$property-class: if(map-has-key($utility, class), map-get($utility, class), nth($properties, 1));
+		$property-class: if($property-class == null, "", $property-class);
+		
+		$seperator: if($property-class == "" and str-slice($seperator, 1, 1) == "-", str-slice($seperator, 2), $seperator);
+		$property-class-modifier: if($key, if($property-class == "" and $seperator == "", "", "-") + $key, "");
+		
+		@if $value != null {
+			.#{$property-class + $property-class-modifier} {
+				@each $property in $properties {
+					#{$property}: $value !important;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+
+main {
+	text-align: left;
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: $theme-main-padding-y .6em;
+}
+
+table {
+	width: 100%;
+	
+	tr:nth-child(even) {
+		background: inherit;
+	}
+}
+
+td,
+th {
+  padding: $theme-padding-x / 2 $theme-padding-x $theme-padding-x / 2 $theme-padding-x;
+}
+
+.label-fw { width: 60px; }
+
+.error { background: $theme-error; }

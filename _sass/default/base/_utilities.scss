@@ -1,0 +1,62 @@
+
+$utilities: () !default;
+
+$utilities: map-merge(
+	(
+		"margin": (
+			property: margin,
+			class: m,
+			values: map-merge($default-spacings, (auto: auto))
+		),
+		"margin-x": (
+			property: margin-right margin-left,
+			class: mx,
+			values: map-merge($default-spacings, (auto: auto))
+		),
+		"margin-y": (
+			property: margin-top margin-bottom,
+			class: my,
+			values: map-merge($default-spacings, (auto: auto))
+		),
+		"margin-top": (
+			property: margin-top,
+			class: mt,
+			values: map-merge($default-spacings, (auto: auto))
+		),
+		"margin-bottom": (
+			property: margin-bottom,
+			class: mb,
+			values: map-merge($default-spacings, (auto: auto))
+		),
+		"padding": (
+			property: padding,
+			class: p,
+			values: map-merge($default-spacings, (auto: auto))
+		),
+		"padding-x": (
+			property: padding-right padding-left,
+			class: px,
+			values: map-merge($default-spacings, (auto: auto))
+		),
+		"padding-y": (
+			property: padding-top padding-bottom,
+			class: py,
+			values: map-merge($default-spacings, (auto: auto))
+		),
+		"padding-top": (
+			property: padding-top,
+			class: pt,
+			values: map-merge($default-spacings, (auto: auto))
+		),
+		"padding-bottom": (
+			property: padding-bottom,
+			class: pb,
+			values: map-merge($default-spacings, (auto: auto))
+		)
+	),
+	$utilities
+);
+
+@each $key, $utility in $utilities {
+	@include generate($utility);
+}

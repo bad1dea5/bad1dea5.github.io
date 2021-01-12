@@ -1,0 +1,8 @@
+
+- title: Pure ELF64 from scratch
+  url: https://github.com/bad1dea5/docs/blob/master/linux/elf.asm
+  language: assembly
+  
+- title: Pure PE+ from scratch
+  url: https://github.com/bad1dea5/docs/blob/master/windows/PE.asm
+  language: assembly

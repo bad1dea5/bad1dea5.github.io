@@ -1,0 +1,46 @@
+#
+# Welcome to Jekyll!
+#
+
+title: BAD1DEA5
+email: bad1dea5@dev.lan
+description:
+  A centralized deposit of assorted bytes.
+  An asylum to accumulate the numerous observations, during pilgrimage, through various entities.
+baseurl: ""
+source: .
+
+url: "https://bad1dea5.github.io"
+twitter_username: bad1dea5
+github_username:  bad1dea5
+
+lsi: false
+safe: true
+incremental: false
+
+highlighter: rouge
+
+#sass:
+#  style: :compressed
+
+gist:
+  noscript: false
+  
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+collections:
+  archive:
+    output: true
+    permalink: /documentation/:collection/:name
+    
+  private:
+    output: true
+    permalink: /documentation/:collection/:name
+collections_dir: pages
+ 
+# Build settings
+plugins:
+  - jekyll-feed
+  - jemoji
