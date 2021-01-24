@@ -100,3 +100,7 @@ tags: [none]
 		{% highlight nasm %}ret far stack-adjust{% endhighlight %}
 	</div>
 </div>
+
+### Reference
+[(Gnu)as Maunal](https://sourceware.org/binutils/docs/as/index.html "(Gnu)as Maunal")
+[NASM Manual](https://nasm.us/docs.php "NASM Manual")
