@@ -78,3 +78,7 @@ Intel syntax accomplishes this by prefixing memory operands (not the instruction
 </div>
 	</div>
 </div>
+
+### Reference
+[(Gnu)as Maunal](https://sourceware.org/binutils/docs/as/index.html "(Gnu)as Maunal")
+[NASM Manual](https://nasm.us/docs.php "NASM Manual")
