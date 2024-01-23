@@ -1,0 +1,20 @@
+<div class="offcanvas-lg offcanvas-start" id="sidebar" tabindex="-1">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title">{{ site.title }}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebar"></button>
+    </div>
+    <div class="offcanvas-body">
+        <nav class="w-100">
+            <ul class="list-unstyled sidebar">
+                <li>
+                    <ul class="list-unstyled">
+                        {% assign documents = site.documents %}
+                        {% for document in documents %}
+                        <li><a href="{{ document.url }}">{{ document.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

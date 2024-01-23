@@ -1,0 +1,13 @@
+#
+#
+#
+
+- name: KRAMPUS
+  url:  https://github.com/bad1dea5/KRAMPUS
+  lang: asm, cpp
+  desc: Unknown
+
+- name: IDLEMILK
+  url:  https://github.com/bad1dea5/IDLEMILK
+  lang: python
+  desc: Unknown

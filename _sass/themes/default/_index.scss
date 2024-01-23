@@ -1,0 +1,114 @@
+//
+//
+//
+
+@import "colours";
+@import "pygments";
+
+$theme-header-bg: $black;
+$theme-header-text: $white;
+$theme-hover-primary: $red;
+$theme-hover-secondary: hsl(0, 100%, 75%);
+$theme-transition: all .2s ease 0s;
+
+a {
+    color: $theme-hover-primary;
+    text-decoration: none;
+
+    &:hover {
+        color: $theme-hover-secondary;
+    }
+}
+
+code {
+    color: $theme-hover-secondary;
+}
+
+pre {
+    background-color: $magnolia;
+    font-size: .85rem;
+    padding: .3750rem .5rem;
+    display: inline flow-root list-item;
+    min-width: 480px;
+}
+
+header {
+    background-color: $theme-header-bg;
+
+    .navbar {
+        &-brand,
+        &-text,
+        &-toggler,
+        &-nav .nav-link {
+            color: $theme-header-text;
+            transition: $theme-transition;
+
+            &:hover { color: $theme-hover-primary; }
+        }
+
+        &-nav .nav-link {
+            & i { font-size: 20px; }
+            &.show { color: $theme-hover-primary; }
+        }
+
+        @media (max-width: 991.98px) {
+            &-nav li { margin-left: .5rem; }
+        }
+    }
+}
+
+.bad1dea5 {
+    aside { grid-area: sidebar; }
+    main { grid-area: content; padding-right: 1rem; }
+
+    .sidebar {
+        li {
+            -moz-column-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        ul {
+            font-size: .875rem;
+
+            li a {
+                display: block;
+                padding: .1225rem .5rem;
+                border-radius: .375rem;
+                transition: $theme-transition;
+
+                &:hover {
+                    background-color: $theme-hover-primary;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991.98px) {
+        .sidebar {
+            font-size: .875rem;
+            column-count: 2;
+            column-gap: 1rem;
+            -moz-column-count: 2;
+            -moz-column-gap: 1rem;
+        }
+    }
+
+    @media (min-width: 992px) {
+        display: grid;
+        grid-template-areas: "sidebar content";
+        grid-template-columns: 3fr 9fr;
+        gap: 1rem;
+
+        aside {
+            position: -webkit-sticky;
+            position: sticky;
+            display: block !important;
+            height: calc(100vh - 7rem);
+            top: 5rem;
+            overflow-y: auto;
+        }
+    }
+}
+
+.small { font-size: .875rem; }
