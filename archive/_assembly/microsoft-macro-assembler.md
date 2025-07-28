@@ -54,6 +54,7 @@ not have explicit initialization in source code.
 _bss segment
     foo dword 0
     bar qword 0
+    cha qword 256
 _bss ends
 {% endhighlight %}
 
